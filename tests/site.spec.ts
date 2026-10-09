@@ -29,24 +29,53 @@ test.describe('Colton Williams Portfolio', () => {
     await expect(bioYears).toContainText('years');
   });
 
+  test('should showcase both Outstanding Technical Achievement Awards', async ({ page }) => {
+    const achievements = page.locator('.achievement-callout');
+    await expect(achievements).toHaveCount(2);
+    await expect(achievements.first()).toContainText('IBM Verify for Government');
+    await expect(achievements.nth(1)).toContainText('MFA Policy Engine');
+
+    const heroStatPill = page.locator('.stat-pill', { hasText: 'Tech Achievement Awards' });
+    await expect(heroStatPill).toContainText('2x');
+  });
+
   test('should render technology panel with interactive categories and search', async ({ page }) => {
     const cards = page.locator('.tech-card');
     const totalCount = await cards.count();
-    expect(totalCount).toBeGreaterThanOrEqual(15);
+    expect(totalCount).toBeGreaterThanOrEqual(20);
 
-    // Filter by Security & IAM
+    // Filter by Security & IAM (SpiceDB, FedRAMP, OIDC, etc.)
     await page.click('button[data-category="security"]');
     const securityCards = page.locator('.tech-card[data-category="security"]');
     await expect(securityCards.first()).toBeVisible();
     const secCount = await securityCards.count();
-    expect(secCount).toBeGreaterThanOrEqual(4);
+    expect(secCount).toBeGreaterThanOrEqual(6);
 
-    // Search for Terraform
+    // Filter by AI & Innovation (Gemini AI & BobAI)
+    await page.click('button[data-category="ai"]');
+    const aiCards = page.locator('.tech-card[data-category="ai"]');
+    await expect(aiCards).toHaveCount(2);
+    await expect(aiCards.first()).toContainText('Gemini AI');
+    await expect(aiCards.nth(1)).toContainText('BobAI');
+
+    // Search for SpiceDB
     await page.click('button[data-category="all"]');
-    await page.fill('#tech-search-input', 'Terraform');
-    const searchCards = page.locator('.tech-card');
-    await expect(searchCards).toHaveCount(1);
-    await expect(searchCards.first()).toContainText('Terraform');
+    await page.fill('#tech-search-input', 'SpiceDB');
+    const spiceCards = page.locator('.tech-card');
+    await expect(spiceCards).toHaveCount(1);
+    await expect(spiceCards.first()).toContainText('SpiceDB');
+
+    // Search for RabbitMQ
+    await page.fill('#tech-search-input', 'RabbitMQ');
+    const rabbitCards = page.locator('.tech-card');
+    await expect(rabbitCards).toHaveCount(1);
+    await expect(rabbitCards.first()).toContainText('RabbitMQ');
+
+    // Search for CouchDB / NoSQL
+    await page.fill('#tech-search-input', 'CouchDB');
+    const noSqlCards = page.locator('.tech-card');
+    await expect(noSqlCards).toHaveCount(1);
+    await expect(noSqlCards.first()).toContainText('DynamoDB');
 
     // Clear search
     await page.click('#tech-clear-btn');

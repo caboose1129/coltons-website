@@ -774,19 +774,31 @@ main {
   font-weight: 700;
 }
 
-.achievement-callout {
+.achievements-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
   margin-top: auto;
+}
+
+.achievement-callout {
   display: flex;
   align-items: center;
   gap: 1.25rem;
-  padding: 1.25rem;
+  padding: 1.15rem 1.25rem;
   background: light-dark(rgba(245, 158, 11, 0.08), rgba(245, 158, 11, 0.12));
   border: 1px solid light-dark(rgba(245, 158, 11, 0.25), rgba(245, 158, 11, 0.3));
   border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.achievement-callout:hover {
+  border-color: light-dark(#d97706, #f59e0b);
+  transform: translateY(-2px);
 }
 
 .trophy-icon {
-  font-size: 2rem;
+  font-size: 1.85rem;
   line-height: 1;
 }
 
@@ -798,8 +810,26 @@ main {
 }
 
 .callout-text span {
-  font-size: 0.85rem;
+  font-size: 0.84rem;
   color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.timeline-award-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.85rem;
+  background: light-dark(rgba(245, 158, 11, 0.1), rgba(245, 158, 11, 0.15));
+  border: 1px solid light-dark(rgba(245, 158, 11, 0.3), rgba(245, 158, 11, 0.4));
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  color: light-dark(#b45309, #fbbf24);
+  margin-bottom: 0.85rem;
+}
+
+.timeline-award-badge strong {
+  color: light-dark(#92400e, #fef3c7);
 }
 
 /* ==========================================================================

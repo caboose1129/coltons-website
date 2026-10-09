@@ -11,10 +11,11 @@ Modern, high-performance personal portfolio and engineering showcase for **Colto
 ## ✨ Features & Architecture
 
 - **Dynamic Tenure Calculation**: Automatically calculates and renders the exact number of years and months of software development experience since career inception (June 2015), dynamically keeping the hero stats and bio current without manual updates.
-- **Interactive Most Used Technologies Panel**:
-  - Filterable by core domain: *Security & IAM*, *Cloud & DevOps*, *Backend & Languages*, and *Data & Scale*.
+- **2x Outstanding Technical Achievement Awards**: Showcasing honors for architectural leadership on **IBM Verify for Government** (FedRAMP & FIPS in AWS GovCloud) and the **MFA Policy Engine**.
+- **Interactive Most Used Technologies Panel (28 Technologies)**:
+  - Categorized across *Security & IAM*, *Cloud & DevOps*, *AI & Innovation*, *Backend & Messaging*, and *Data & NoSQL*.
+  - Added enterprise coverage: **SpiceDB (Zanzibar ReBAC)**, **FedRAMP & AWS GovCloud**, **FIPS 140 Enablement**, **Gemini AI**, **IBM BobAI**, **ArgoCD (GitOps)**, **Rundeck**, **Jenkins**, **RabbitMQ**, and distributed **NoSQL (CouchDB, Cloudant, DynamoDB)**.
   - Real-time search filter with instant query matching across tech titles, descriptions, and tag pills.
-  - Highlights enterprise experience (e.g. OIDC, OAuth 2.0, Red Hat OpenShift, Kubernetes, Terraform IaC, Golang, and multi-million user migrations).
 - **Modern Dark & Light Theme System**:
   - Built strictly adhering to the latest Modern Web Standards (`light-dark()`, `:has()`, and `color-scheme` metadata).
   - Respects OS preference by default with seamless toggle support and persistent storage.
@@ -23,7 +24,7 @@ Modern, high-performance personal portfolio and engineering showcase for **Colto
   - Radiant accents (Cyber Cyan & Electric Violet) with subtle ambient glow lighting and micro-animations.
   - High-resolution authentic imagery and responsive glassmorphic cards.
   - Responsive mobile-first layout with smooth navigation spy.
-- **Automated Testing Suite**: End-to-end automated UI validation powered by Playwright.
+- **Automated Testing Suite**: End-to-end automated UI validation powered by Playwright across Chromium and WebKit.
 
 ---
 

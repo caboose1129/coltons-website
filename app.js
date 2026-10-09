@@ -100,6 +100,30 @@ const TECHNOLOGIES_DATA = [
     tags: ['Authorization', 'PKCE', 'API Security']
   },
   {
+    name: 'SpiceDB (Zanzibar ReBAC)',
+    category: 'security',
+    icon: '🔐',
+    experience: 'Fine-Grained Auth',
+    description: 'Relationship-Based Access Control (ReBAC) inspired by Google Zanzibar. Modeling and evaluating fine-grained authorization graphs at microsecond latency.',
+    tags: ['ReBAC', 'Zanzibar', 'Permissions', 'AuthZ']
+  },
+  {
+    name: 'FedRAMP & AWS GovCloud',
+    category: 'security',
+    icon: '🏛️',
+    experience: 'Award Winner',
+    description: 'Deploying, maintaining, and hardening mission-critical enterprise environments compliant with FedRAMP High and Moderate standards in AWS GovCloud. Technical Achievement Award winner for IBM Verify for Government.',
+    tags: ['FedRAMP', 'AWS GovCloud', 'NIST 800-53', 'Awarded']
+  },
+  {
+    name: 'FIPS Cryptographic Enablement',
+    category: 'security',
+    icon: '🔒',
+    experience: 'System Hardening',
+    description: 'Enforcing FIPS 140-validated cryptographic modules, hardened OS kernels, strict TLS cipher suites, and end-to-end encrypted data pathways.',
+    tags: ['FIPS 140', 'Hardening', 'Cryptography', 'Zero Trust']
+  },
+  {
     name: 'MFA Policy Engine',
     category: 'security',
     icon: '🏆',
@@ -142,6 +166,14 @@ const TECHNOLOGIES_DATA = [
     tags: ['K8s', 'Helm', 'Ingress', 'Clustering']
   },
   {
+    name: 'ArgoCD (GitOps)',
+    category: 'cloud',
+    icon: '🐙',
+    experience: 'Declarative GitOps',
+    description: 'Automated GitOps continuous delivery for Kubernetes and OpenShift workloads, automated drift synchronization, and canary deployments.',
+    tags: ['GitOps', 'OpenShift', 'Continuous Delivery', 'Sync']
+  },
+  {
     name: 'Terraform (IaC)',
     category: 'cloud',
     icon: '🏗️',
@@ -158,15 +190,23 @@ const TECHNOLOGIES_DATA = [
     tags: ['Containers', 'OCI', 'Microservices']
   },
   {
+    name: 'Rundeck & Jenkins',
+    category: 'cloud',
+    icon: '⚙️',
+    experience: 'Ops Automation',
+    description: 'Orchestrating self-service runbook automation with Rundeck and building resilient multi-stage CI/CD build pipelines with Jenkins.',
+    tags: ['Rundeck', 'Jenkins', 'Runbooks', 'CI/CD']
+  },
+  {
     name: 'IBM Cloud & AWS',
     category: 'cloud',
     icon: '☁️',
     experience: 'Senior Level',
-    description: 'Enterprise hybrid cloud deployments, VPC networking, cloud IAM, secrets management, and compliance.',
-    tags: ['Hybrid Cloud', 'VPC', 'Cloud IAM']
+    description: 'Enterprise hybrid cloud deployments, GovCloud isolation, VPC networking, cloud IAM, secrets management, and compliance.',
+    tags: ['Hybrid Cloud', 'GovCloud', 'VPC', 'Cloud IAM']
   },
   {
-    name: 'CI/CD Pipelines & GitOps',
+    name: 'CI/CD Pipelines & Automation',
     category: 'cloud',
     icon: '🔄',
     experience: 'Continuous',
@@ -174,7 +214,25 @@ const TECHNOLOGIES_DATA = [
     tags: ['Automation', 'DevOps', 'Quality Gates']
   },
 
-  // Backend & Languages
+  // AI & Innovation
+  {
+    name: 'Gemini AI',
+    category: 'ai',
+    icon: '✨',
+    experience: 'Applied GenAI',
+    description: 'Integrating Google Gemini multimodal models and APIs to build intelligent software capabilities, structured reasoning pipelines, and automated intelligence.',
+    tags: ['Gemini', 'LLMs', 'Multimodal', 'GenAI']
+  },
+  {
+    name: 'BobAI (IBM Enterprise AI)',
+    category: 'ai',
+    icon: '🤖',
+    experience: 'Enterprise AI',
+    description: 'Leveraging IBM BobAI for enterprise-grade developer acceleration, code intelligence, operational troubleshooting, and automated workflows.',
+    tags: ['BobAI', 'IBM AI', 'Developer Acceleration', 'LLM']
+  },
+
+  // Backend & Messaging
   {
     name: 'Go (Golang)',
     category: 'backend',
@@ -190,6 +248,14 @@ const TECHNOLOGIES_DATA = [
     experience: 'Enterprise Deep',
     description: 'Enterprise-grade backend services, asynchronous processing, and robust cryptographic implementations.',
     tags: ['Enterprise', 'Spring', 'JVM', 'Security']
+  },
+  {
+    name: 'RabbitMQ',
+    category: 'backend',
+    icon: '🐇',
+    experience: 'Event-Driven',
+    description: 'Enterprise message brokering, exchange-to-queue topologies, dead-letter routing, and high-throughput decoupled asynchronous processing.',
+    tags: ['AMQP', 'Message Broker', 'Event-Driven', 'Pub/Sub']
   },
   {
     name: 'TypeScript & Node.js',
@@ -216,7 +282,15 @@ const TECHNOLOGIES_DATA = [
     tags: ['OpenAPI', 'API Design', 'Contracts']
   },
 
-  // Data & Scale
+  // Data & NoSQL
+  {
+    name: 'NoSQL: CouchDB, Cloudant & DynamoDB',
+    category: 'data',
+    icon: '🍃',
+    experience: 'Distributed NoSQL',
+    description: 'Architecting distributed document and key-value datastores with Apache CouchDB, IBM Cloudant, and AWS DynamoDB with cross-region sync.',
+    tags: ['CouchDB', 'Cloudant', 'DynamoDB', 'NoSQL']
+  },
   {
     name: 'Large-Scale Data Migrations',
     category: 'data',
@@ -343,8 +417,9 @@ function formatCategoryName(cat) {
   switch (cat) {
     case 'security': return 'Security & IAM';
     case 'cloud': return 'Cloud & DevOps';
-    case 'backend': return 'Backend';
-    case 'data': return 'Data & Scale';
+    case 'ai': return 'AI & Innovation';
+    case 'backend': return 'Backend & Messaging';
+    case 'data': return 'Data & NoSQL';
     default: return cat;
   }
 }
