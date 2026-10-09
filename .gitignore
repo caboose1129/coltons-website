@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Operating System
+.DS_Store
+Thumbs.db
+
+# Playwright & Testing
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+
+# Local Environment & Logs
+*.log
+.env
+.env.local

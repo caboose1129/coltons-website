@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colton Williams | Advisory Software Engineer & Cloud Architect</title>
+  <meta name="description" content="Colton Williams is an Advisory Software Engineer based in Austin, TX, specializing in Identity and Access Management (IAM), Cybersecurity, Cloud SaaS, and OpenShift.">
+  <meta name="color-scheme" content="light dark">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Colton Williams | Advisory Software Engineer">
+  <meta property="og:description" content="Software Engineer from Austin, TX with expertise in IAM, Security, and Scalable Cloud Systems.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.coltonwilliams.net/">
+  <meta property="og:image" content="assets/colton_portrait.png">
+
+  <!-- FOUC Prevention Script for Dark/Light Mode -->
+  <script>
+    (function() {
+      try {
+        const stored = localStorage.getItem('color-scheme');
+        if (stored) {
+          document.querySelector('meta[name="color-scheme"]').content = stored;
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- Ambient background glow elements -->
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+  <div class="ambient-glow glow-3" aria-hidden="true"></div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo" aria-label="Colton Williams Home">
+        <span class="logo-symbol">&lt;CW/&gt;</span>
+        <span class="logo-text">Colton Williams</span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#technologies" class="nav-link">Technologies</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#writing" class="nav-link">Blog</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle color theme" title="Toggle color theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="https://www.linkedin.com/in/colton-williams-swe/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary-compact header-cta">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+
+        <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>Advisory Software Engineer &bull; Austin, TX</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Colton Williams</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Software Developer and aspiring Solutions Architect engineering robust, high-scale 
+            <span class="highlight">Cloud SaaS</span>, <span class="highlight">Identity & Access Management (IAM)</span>, 
+            and resilient cybersecurity solutions.
+          </p>
+
+          <!-- Dynamic Experience Highlight -->
+          <div class="experience-counter-card">
+            <div class="counter-glow" aria-hidden="true"></div>
+            <div class="counter-num-box">
+              <span id="dynamic-hero-years" class="counter-number">10+</span>
+              <span class="counter-unit">Years</span>
+            </div>
+            <div class="counter-label-box">
+              <span class="counter-title">Professional Experience</span>
+              <span class="counter-sub" id="dynamic-exact-tenure">Calculated dynamically from June 2015 &bull; Full Lifecycle Engineering</span>
+            </div>
+          </div>
+
+          <div class="hero-buttons">
+            <a href="#technologies" class="btn btn-primary">
+              <span>Explore Technologies</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="https://blog.coltonwilliams.net/" target="_blank" rel="noopener noreferrer" class="btn btn-glass">
+              <span>Read My Blog</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+            <a href="#about" class="btn btn-secondary">
+              <span>About Me</span>
+            </a>
+          </div>
+
+          <!-- Quick stat pills -->
+          <div class="hero-stat-pills">
+            <div class="stat-pill">
+              <span class="pill-number">M+</span>
+              <span class="pill-text">Users Migrated</span>
+            </div>
+            <div class="stat-pill">
+              <span class="pill-number">IAM</span>
+              <span class="pill-text">Security Architect</span>
+            </div>
+            <div class="stat-pill">
+              <span class="pill-number">&#127942;</span>
+              <span class="pill-text">Awarded Achievement</span>
+            </div>
+            <div class="stat-pill">
+              <span class="pill-number">A&amp;M</span>
+              <span class="pill-text">Comp. Engineering</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="portrait-card">
+            <div class="portrait-ambient-glow" aria-hidden="true"></div>
+            <div class="portrait-image-wrapper">
+              <img src="assets/colton_portrait.png" alt="Colton Williams - Software Engineer" class="portrait-img" width="460" height="420" loading="eager">
+              <div class="portrait-overlay"></div>
+            </div>
+            <div class="portrait-glass-footer">
+              <div class="status-indicator">
+                <span class="status-pulse"></span>
+                <span class="status-text">IBM Advisory Software Engineer</span>
+              </div>
+              <span class="location-badge">Austin, Texas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-badge">Background &amp; Philosophy</span>
+          <h2 class="section-title">Built with an Attacker-First Mindset</h2>
+          <p class="section-subtitle">Engineering resilient cloud ecosystems by combining QA rigor, software development, and deep cybersecurity intuition.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Quote Card -->
+          <div class="about-card quote-card">
+            <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+            <blockquote class="hacker-quote">
+              The hacker didn't succeed through sophistication. Rather he poked at obvious places, trying to enter through unlocked doors. Persistence, not wizardry, let him through.
+            </blockquote>
+            <div class="quote-caption">
+              <span>Security Axiom</span> &bull; <span>Guiding Principle in Every Architecture</span>
+            </div>
+          </div>
+
+          <!-- Main Bio Card -->
+          <div class="about-card bio-card">
+            <h3 class="bio-heading">Full Lifecycle Engineer &amp; Future Architect</h3>
+            <p class="bio-paragraph">
+              I am an innovative Software Engineer offering <strong class="dynamic-highlight" id="dynamic-bio-years">over 10 years</strong> of expertise in development. A seasoned professional with a deep background across the complete software development lifecycle, I quickly master new technologies while leading initiatives in both collaborative and self-directed environments. My goal is to continually push boundaries toward becoming a Software Solutions Architect.
+            </p>
+            <p class="bio-paragraph">
+              My career started in QA testing rather than direct development. This foundation gave me a distinctive engineering perspective: <em>always think like a hacker first</em> when developing secure, fault-tolerant code. Today, I develop cloud-based SaaS offerings providing enterprise Identity and Access Management (IAM), diving deep into OpenID Connect (OIDC), identity proofing, OpenShift containerization, and large-scale data migrations of millions of users.
+            </p>
+
+            <div class="achievement-callout">
+              <div class="trophy-icon" aria-hidden="true">&#127942;</div>
+              <div class="callout-text">
+                <strong>Outstanding Technical Achievement Award</strong>
+                <span>Recognized for pioneering multi-factor authentication (MFA) policy architecture and security infrastructure.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOST USED TECHNOLOGIES PANEL -->
+    <section id="technologies" class="technologies-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-badge">Technical Arsenal</span>
+          <h2 class="section-title">Most Used Technologies &amp; Expertise</h2>
+          <p class="section-subtitle">Core platforms, languages, frameworks, and architecture tools utilized in production across enterprise cloud scale.</p>
+        </div>
+
+        <!-- Tech Panel Toolbar -->
+        <div class="tech-toolbar">
+          <!-- Category Tabs -->
+          <div class="tech-category-tabs" role="tablist" aria-label="Technology Categories">
+            <button class="tech-tab active" data-category="all" role="tab" aria-selected="true">
+              All Technologies (<span id="all-count">0</span>)
+            </button>
+            <button class="tech-tab" data-category="security" role="tab" aria-selected="false">
+              Security &amp; IAM
+            </button>
+            <button class="tech-tab" data-category="cloud" role="tab" aria-selected="false">
+              Cloud &amp; DevOps
+            </button>
+            <button class="tech-tab" data-category="backend" role="tab" aria-selected="false">
+              Backend &amp; Languages
+            </button>
+            <button class="tech-tab" data-category="data" role="tab" aria-selected="false">
+              Data &amp; Scale
+            </button>
+          </div>
+
+          <!-- Search Filter -->
+          <div class="tech-search-wrapper">
+            <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="tech-search-input" class="tech-search-input" placeholder="Filter technology or keyword..." aria-label="Search technologies">
+            <button id="tech-clear-btn" class="tech-clear-btn" aria-label="Clear search" style="display: none;">&times;</button>
+          </div>
+        </div>
+
+        <!-- Technologies Grid -->
+        <div id="tech-cards-grid" class="tech-cards-grid">
+          <!-- Dynamically populated via app.js -->
+        </div>
+
+        <!-- Real-world Impact Highlights -->
+        <div class="tech-summary-banner">
+          <div class="banner-item">
+            <span class="banner-icon">&#128274;</span>
+            <div class="banner-info">
+              <h4>Identity &amp; Zero Trust</h4>
+              <p>OIDC, OAuth 2.0, MFA engines, and security token service architecture.</p>
+            </div>
+          </div>
+          <div class="banner-item">
+            <span class="banner-icon">&#9729;&#65039;</span>
+            <div class="banner-info">
+              <h4>Containerized Clouds</h4>
+              <p>Kubernetes and Red Hat OpenShift enterprise workload orchestration.</p>
+            </div>
+          </div>
+          <div class="banner-item">
+            <span class="banner-icon">&#9889;</span>
+            <div class="banner-info">
+              <h4>Infrastructure as Code</h4>
+              <p>Repeatable Terraform deployments across multi-region environments.</p>
+            </div>
+          </div>
+          <div class="banner-item">
+            <span class="banner-icon">&#128202;</span>
+            <div class="banner-info">
+              <h4>High-Volume Migrations</h4>
+              <p>Zero-downtime migrations managing data integrity for millions of accounts.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Career Timeline -->
+    <section id="experience" class="experience-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-badge">Career Journey</span>
+          <h2 class="section-title">Work Experience &amp; Education</h2>
+          <p class="section-subtitle">Consistent growth and engineering leadership across high-stakes enterprise projects.</p>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Item 1 -->
+          <div class="timeline-card current-role">
+            <div class="timeline-marker">
+              <span class="marker-pulse"></span>
+            </div>
+            <div class="timeline-header">
+              <div class="timeline-role-info">
+                <span class="company-tag">IBM</span>
+                <h3 class="role-title">Advisory Software Engineer</h3>
+              </div>
+              <div class="timeline-period">
+                <span class="period-badge">Sep 2020 &ndash; Present</span>
+                <span class="tenure-badge" id="advisory-tenure">4+ Years</span>
+              </div>
+            </div>
+            <p class="timeline-desc">
+              Leading architecture and implementation for enterprise cloud SaaS Identity and Access Management (IAM). 
+              Directing technical initiatives in OpenID Connect (OIDC), identity proofing, OpenShift container orchestration, 
+              and repeatable Terraform infrastructure deployments. Designing multi-region fault tolerance and scaling services to millions of active users.
+            </p>
+            <div class="timeline-tags">
+              <span>SaaS IAM</span>
+              <span>OpenShift</span>
+              <span>Terraform</span>
+              <span>OIDC</span>
+              <span>Identity Proofing</span>
+              <span>Microservices</span>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="timeline-card">
+            <div class="timeline-marker"></div>
+            <div class="timeline-header">
+              <div class="timeline-role-info">
+                <span class="company-tag">IBM</span>
+                <h3 class="role-title">Staff Software Engineer</h3>
+              </div>
+              <div class="timeline-period">
+                <span class="period-badge">Apr 2017 &ndash; Sep 2020</span>
+                <span class="tenure-badge">3.5 Years</span>
+              </div>
+            </div>
+            <p class="timeline-desc">
+              Spearheaded multi-factor authentication (MFA) policy frameworks, earning an Outstanding Technical Achievement Award. 
+              Executed major customer data migrations shifting millions of user profiles with zero data loss. Championed secure coding practices 
+              across team workflows.
+            </p>
+            <div class="timeline-tags">
+              <span>MFA Policy Engine</span>
+              <span>Data Migration (Millions)</span>
+              <span>OAuth 2.0</span>
+              <span>Security Award</span>
+              <span>Go / Java</span>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="timeline-card">
+            <div class="timeline-marker"></div>
+            <div class="timeline-header">
+              <div class="timeline-role-info">
+                <span class="company-tag">IBM</span>
+                <h3 class="role-title">Software Engineer</h3>
+              </div>
+              <div class="timeline-period">
+                <span class="period-badge">Jun 2015 &ndash; Apr 2017</span>
+                <span class="tenure-badge">2 Years</span>
+              </div>
+            </div>
+            <p class="timeline-desc">
+              Transitioned from QA test engineering into full-stack development. Implemented core IAM features, automated test matrices, 
+              and security vulnerability remediations for enterprise client platforms.
+            </p>
+            <div class="timeline-tags">
+              <span>Full Lifecycle</span>
+              <span>Automated QA &amp; Testing</span>
+              <span>Cloud Services</span>
+              <span>Security Testing</span>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="timeline-card education-card">
+            <div class="timeline-marker edu-marker"></div>
+            <div class="timeline-header">
+              <div class="timeline-role-info">
+                <span class="company-tag edu-tag">Texas A&amp;M University</span>
+                <h3 class="role-title">B.S. in Computer Engineering</h3>
+              </div>
+              <div class="timeline-period">
+                <span class="period-badge">2010 &ndash; 2015</span>
+                <span class="tenure-badge">Graduated</span>
+              </div>
+            </div>
+            <p class="timeline-desc">
+              Rigorous engineering curriculum combining electrical engineering, hardware systems, algorithms, operating systems, and computer architecture.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Work / Blog Section -->
+    <section id="writing" class="writing-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-badge">Publications &amp; Insights</span>
+          <h2 class="section-title">Selected Writing &amp; Blog</h2>
+          <p class="section-subtitle">Read my articles on engineering, software architecture, and technology exploration.</p>
+        </div>
+
+        <div class="blog-spotlight-card">
+          <div class="blog-visual">
+            <img src="assets/desk_work.png" alt="Engineering desk with workspace and laptop" class="blog-img" width="380" height="380" loading="lazy">
+          </div>
+          <div class="blog-content">
+            <span class="blog-kicker">Personal Tech Publication</span>
+            <h3 class="blog-title">Deep Dives into Cloud, IAM, and Engineering Practice</h3>
+            <p class="blog-text">
+              I share observations, technical walkthroughs, and lessons learned from a decade in enterprise cloud software engineering. 
+              Covering everything from cloud identity nuances to resilient system design.
+            </p>
+            <div class="blog-action-wrapper">
+              <a href="https://blog.coltonwilliams.net/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <span>Visit blog.coltonwilliams.net</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Connect Section -->
+    <section id="contact" class="contact-section">
+      <div class="section-container">
+        <div class="contact-card">
+          <div class="contact-header">
+            <span class="section-badge">Get in Touch</span>
+            <h2 class="contact-title">Let's Connect &amp; Collaborate</h2>
+            <p class="contact-subtitle">
+              Interested in discussing cloud architecture, Identity &amp; Access Management, or future technical collaborations? Reach out on LinkedIn.
+            </p>
+          </div>
+
+          <div class="contact-actions">
+            <a href="https://www.linkedin.com/in/colton-williams-swe/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              <span>Connect on LinkedIn</span>
+            </a>
+            <a href="https://blog.coltonwilliams.net/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-large">
+              <span>Read My Blog</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <span class="footer-logo">&lt;CW/&gt; Colton Williams</span>
+        <p class="footer-copy">
+          &copy; <span id="current-year">2026</span> Colton Williams &bull; Software Developer in Austin, TX.
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.coltonwilliams.net/">Home</a>
+        <a href="https://blog.coltonwilliams.net/" target="_blank" rel="noopener noreferrer">Blog</a>
+        <a href="https://www.linkedin.com/in/colton-williams-swe/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="#hero" class="back-to-top" title="Back to top">&uarr; Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
