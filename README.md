@@ -2,8 +2,8 @@
 
 Modern, high-performance personal portfolio and engineering showcase for **Colton Williams**, Advisory Software Engineer based in Austin, TX.
 
-🌐 Live Site: [https://www.coltonwilliams.net](https://www.coltonwilliams.net)  
-✍️ Engineering Blog: [https://blog.coltonwilliams.net](https://blog.coltonwilliams.net)  
+🌐 Live Site: [https://www.colton-williams.com](https://www.colton-williams.com)  
+✍️ Engineering Blog: [https://blog.colton-williams.com](https://blog.colton-williams.com)  
 💼 LinkedIn: [https://www.linkedin.com/in/colton-williams-swe/](https://www.linkedin.com/in/colton-williams-swe/)
 
 ---
