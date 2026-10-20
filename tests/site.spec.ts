@@ -91,4 +91,44 @@ test.describe('Colton Williams Portfolio', () => {
     const updatedScheme = await metaTheme.getAttribute('content');
     expect(updatedScheme).not.toBe(initialScheme);
   });
+
+  test('should feature Projects tab, top-of-page app links, and RankAnything showcase section', async ({ page }) => {
+    // 1. Projects tab in main nav
+    const projectsNav = page.locator('.nav-menu .nav-link', { hasText: 'Projects' });
+    await expect(projectsNav).toBeVisible();
+    await expect(projectsNav).toHaveAttribute('href', '#projects');
+
+    // 2. Direct app link near top of page in header actions
+    const headerAppLink = page.locator('.header-app-link');
+    await expect(headerAppLink).toHaveAttribute('href', 'https://app.colton-williams.com');
+    await expect(headerAppLink).toHaveAttribute('target', '_blank');
+    await expect(headerAppLink).toContainText('RankAnything');
+    await expect(headerAppLink).toContainText('PoC');
+
+    // 3. Hero button for RankAnything
+    const heroAppBtn = page.locator('.btn-hero-app');
+    await expect(heroAppBtn).toBeVisible();
+    await expect(heroAppBtn).toHaveAttribute('href', 'https://app.colton-williams.com');
+    await expect(heroAppBtn).toContainText('RankAnything (PoC)');
+
+    // 4. Dedicated Projects section
+    const projectsSection = page.locator('#projects');
+    await expect(projectsSection).toBeVisible();
+    await expect(projectsSection.locator('.project-title')).toContainText('RankAnything');
+    await expect(projectsSection.locator('.project-kicker')).toContainText('Proof of Concept');
+    await expect(projectsSection.locator('.project-desc')).toContainText('Austin');
+    await expect(projectsSection.locator('.project-tech-tags')).toContainText('Docker Compose');
+    await expect(projectsSection.locator('.project-tech-tags')).toContainText('Cloudflare Tunnels');
+
+    // Launch button inside project showcase card
+    const projectLaunchBtn = projectsSection.locator('.project-actions a.btn-primary');
+    await expect(projectLaunchBtn).toHaveAttribute('href', 'https://app.colton-williams.com');
+    await expect(projectLaunchBtn).toHaveAttribute('target', '_blank');
+
+    // 5. Footer links
+    const footerProjectsLink = page.locator('.footer-links a', { hasText: 'Projects' });
+    await expect(footerProjectsLink).toHaveAttribute('href', '#projects');
+    const footerAppLink = page.locator('.footer-links a', { hasText: 'RankAnything (PoC)' });
+    await expect(footerAppLink).toHaveAttribute('href', 'https://app.colton-williams.com');
+  });
 });

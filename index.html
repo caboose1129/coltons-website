@@ -53,6 +53,7 @@
         <a href="#about" class="nav-link">About</a>
         <a href="#technologies" class="nav-link">Technologies</a>
         <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
         <a href="#writing" class="nav-link">Blog</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
@@ -75,6 +76,17 @@
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </button>
+
+        <a href="https://app.colton-williams.com" target="_blank" rel="noopener noreferrer" class="btn btn-app-top header-app-link" title="Launch RankAnything App (Proof of Concept)">
+          <span class="live-dot" aria-hidden="true"></span>
+          <span>RankAnything</span>
+          <span class="poc-badge">PoC</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
 
         <a href="https://www.linkedin.com/in/colton-williams-swe/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary-compact header-cta">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
@@ -133,6 +145,15 @@
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </a>
+            <a href="https://app.colton-williams.com" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-hero-app">
+              <span class="live-dot" aria-hidden="true"></span>
+              <span>RankAnything (PoC)</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
             <a href="https://blog.colton-williams.com/" target="_blank" rel="noopener noreferrer" class="btn btn-glass">
               <span>Read My Blog</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -141,8 +162,8 @@
                 <line x1="10" y1="14" x2="21" y2="3"></line>
               </svg>
             </a>
-            <a href="#about" class="btn btn-secondary">
-              <span>About Me</span>
+            <a href="#projects" class="btn btn-secondary">
+              <span>View Projects</span>
             </a>
           </div>
 
@@ -456,6 +477,99 @@
       </div>
     </section>
 
+    <!-- Side Projects & Experiments Section -->
+    <section id="projects" class="projects-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-badge">Side Projects &amp; Innovation</span>
+          <h2 class="section-title">Personal Projects &amp; Applied PoCs</h2>
+          <p class="section-subtitle">Independent software experiments, exploratory architectures, and full-stack product prototypes.</p>
+        </div>
+
+        <div class="project-showcase-card">
+          <div class="project-visual-wrapper">
+            <div class="project-preview-frame">
+              <img src="assets/rankanything_preview.jpg" alt="RankAnything app interface showing Austin burger rankings with custom weighted attributes" class="project-img" width="560" height="420" loading="lazy">
+              <div class="project-visual-overlay"></div>
+            </div>
+            <div class="project-live-indicator">
+              <span class="live-dot" aria-hidden="true"></span>
+              <span class="live-text">Live Proof of Concept &bull; app.colton-williams.com</span>
+            </div>
+          </div>
+
+          <div class="project-content">
+            <div class="project-header-meta">
+              <span class="project-kicker">Featured Side Project &bull; Proof of Concept</span>
+              <span class="project-stage-pill">Active PoC</span>
+            </div>
+
+            <h3 class="project-title">
+              RankAnything <span class="project-title-sub">&mdash; Modular &amp; Transparent Ranking</span>
+            </h3>
+
+            <p class="project-desc">
+              Conceived from the quest to objectively rank Austin's top burger joints and boba tea spots with friends, 
+              <strong>RankAnything</strong> transforms subjective opinions into structured, transparent scores. Instead of generic star ratings, 
+              users define custom weighted attributes (e.g. Patty, Bun, Flavor, Value), calculate real-time weighted composite scores, build dynamic templates, and share interactive lists with friends.
+            </p>
+
+            <div class="project-features-list">
+              <div class="project-feature-item">
+                <div class="feature-icon">&#9878;&#65039;</div>
+                <div class="feature-body">
+                  <strong>Custom Weighted Scoring</strong>
+                  <span>Create bespoke attribute matrices and weighted formulas tailored to any domain.</span>
+                </div>
+              </div>
+              <div class="project-feature-item">
+                <div class="feature-icon">&#128228;</div>
+                <div class="feature-body">
+                  <strong>Shareable &amp; Social Lists</strong>
+                  <span>Compare rankings, exchange lists with friends, and eliminate texting back and forth.</span>
+                </div>
+              </div>
+              <div class="project-feature-item">
+                <div class="feature-icon">&#9881;&#65039;</div>
+                <div class="feature-body">
+                  <strong>Self-Hosted Cloud Infrastructure</strong>
+                  <span>Containerized with Docker Compose and exposed through secure Cloudflare Tunnels to custom subdomain.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-tech-tags">
+              <span>Next.js</span>
+              <span>TypeScript</span>
+              <span>Docker Compose</span>
+              <span>Cloudflare Tunnels</span>
+              <span>Weighted Scoring Engine</span>
+              <span>Responsive UI</span>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://app.colton-williams.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
+                <span>Launch RankAnything App</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+              <span class="project-domain-tag">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+                app.colton-williams.com
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Selected Work / Blog Section -->
     <section id="writing" class="writing-section">
       <div class="section-container">
@@ -530,6 +644,8 @@
       </div>
       <div class="footer-links">
         <a href="https://www.colton-williams.com/">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="https://app.colton-williams.com" target="_blank" rel="noopener noreferrer">RankAnything (PoC)</a>
         <a href="https://blog.colton-williams.com/" target="_blank" rel="noopener noreferrer">Blog</a>
         <a href="https://www.linkedin.com/in/colton-williams-swe/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="#hero" class="back-to-top" title="Back to top">&uarr; Back to top</a>
